@@ -210,7 +210,9 @@ print(result)
 
 result = a >> 1
 print(result)
-# 0101 -> 0010 = 4
+# 0101 -> 0010 = 2
 
 # Shift- Operatoren verschieben die Bitreihe zu einer Seite
-# und füllen auf der anderen Seite mit 0 auf.
+# und füllen auf der anderen Seite mit 0 auf. Dadurch kann 
+# es zu Informationsverlust kommen, wenn auf 1 gekippte Bits
+# auf der rechten Seite "rausfallen".
