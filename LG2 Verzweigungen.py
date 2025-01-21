@@ -45,6 +45,19 @@ if (jahr % 4 == 0 and not jahr % 100 == 0) or (jahr % 400 == 0):
 else:
     print(f"Das Jahr {jahr} ist kein Schaltjahr.")
 
+
+if jahr % 4 == 0:
+    if jahr % 100 == 0:
+        if jahr % 400 == 0:
+            print(f"Das Jahr {jahr} ist ein Schaltjahr.")
+        else:
+            print(f"Das Jahr {jahr} ist kein Schaltjahr.")
+else:
+    print(f"Das Jahr {jahr} ist kein Schaltjahr.")
+
+
+
+
 # 3. Ein Auto soll zwei Eigenschaften haben: Farbe und Marke
 #    Ist es ein roter BMW, soll die Ausgabe lauten:
 #    "Das ist ein schönes Auto"
@@ -55,6 +68,7 @@ else:
 #    Ist es eine andere Marke mit einer anderen Farbe, soll die Ausgabe lauten:
 #    z.B. "Das ist ein blaues Auto der Marke ..." (die Marke statt der Punkte)
 
+"""
 autofarbe = input("Gebe die Farbe des Autos ein:\n")
 automarke = input("Gebe die Marke des Autos ein:\n")
 
@@ -66,3 +80,5 @@ elif autofarbe != "rot" and automarke == "BMW":
     print(f"Das ist ein {autofarbe}er BMW.")
 else:
     print(f"Das ist ein {autofarbe}es Auto der Marke {automarke}.")
+
+"""
