@@ -1,25 +1,46 @@
-# Mutable sind Listen, Sets und Dictionaries
-# LSD
+# Das Konzept von mutable/ immutable bedeutet,
+# dass es veränderbare und nicht veränderbare Datentypen gibt. 
 
-a = 5
+# Mutable sind Listen, Sets und Dictionaries (LSD)
+# Alle anderen Datentypen sind immutable (mit Ausnahme der eigenen durch
+# Klassen definierten Datentypen.)
+ 
+# Um das Konzept über die Ausgabe sichtbar zu machen,
+# benutzen wir die Builtin Funktion id(), die die Nummer der
+# Arbeitsspeicher- Adresse zurückgibt, an der der Wert einer Variablen liegt.
 
-#print("a=5",hex(id(a)))
+a = 5       # Zahlen sind grundsätzlich immutable.
+print("a=5",hex(id(a))) # Die Speicheradresse wird als Hexadezimalzahl ausgegeben.
 
-a = 6
+# Der Wert der Variable a wird neu zugewiesen.
+# Dadurch wird (weil Zahlen immutable) ein neues Objekt 
+# mit einer anderen Adresse im Arbeitsspeicher angelegt.
 
-#print("a=6",hex(id(a)))
+a = 6       
+print("a=6",hex(id(a))) 
+
+# Pythons Speicherkonzept ist so, dass im Speicher Werte, die im Code
+# irgendwann mal definiert wurden, vorgehalten werden. Nimmt eine weitere
+# Variable diesen Wert an, zeigt sie ebenfalls auf diese Speicheradresse.
+# Das ist sehr speichereffizient.
 
 b = 6
+print("b=6",hex(id(b))) # Vergleiche mit Speicheradresse von a!
 
-#print("b=6",hex(id(b)))
+# Auch bei Sequenzvariablen und deren Elementen ist das so.
 
-char = "e"
+char = "e"  # Das Zeichen 'e' wird im Speicher abgelegt.
 
-string_a = "text"
-# print(hex(id(string_a)))
+string_a = "text"   # Die Zeichenkette string_a wird im Speicher abgelegt.
+print(hex(id(string_a)))
 
-string_a = "texte"
-# print(hex(id(string_a)))
+string_a = "texte"  # Wegen Veränderung neues Objekt (neue Adresse) im Speicher.
+print(hex(id(string_a)))
+
+# Aber achte auf die Adressen der Elemente:
+
+for char in string_a:
+    print(hex(id(char)))
 
 liste = [1,2,3,4,5,6]
 # print(hex(id(liste)))
