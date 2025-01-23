@@ -86,7 +86,7 @@ ausgangsliste = [68, 44, 52, 92, 11, 4, 61, 69, 67, 3]
 # eingangsliste.insert(7, 69)
 
 # Alternative 1 mit Loop.
-for index, num in enumerate(ausgangsliste):
+for index, num in enumerate(ausgangsliste): # enumerate führt zu [[0,'a'], [1,'b'], [2,'c']]
     if eingangsliste[index] != num:
         eingangsliste.insert(index, num)
 
