@@ -14,13 +14,17 @@ big_list =[41, 19, 21, 7, 18, 26, 25, 28, 24, 14,
            4, 29, 10, 43, 15, 12, 45, 47, 25, 34]
 
 print("\nAufgabe 1a\n")
-print(big_list[0:40])  # oder big_list[0:len(big_list)//2]
+print(big_list[:40])  # oder big_list[:len(big_list)//2]
+
 print("\nAufgabe 1b\n")
-print(big_list[65:81]) # oder big_list[len(big_list)-15:len(big_list)+1]
+print(big_list[65:]) # oder big_list[len(big_list)-15:]
+
 print("\nAufgabe 1c\n")
 print(big_list[20:61]) # oder big_list[20:len(big_list)-19]
+
 print("\nAufgabe 1d\n")
 print(big_list[80:39:-1]) # oder big_list[len(big_list):len(big_list)//2-1:-1]
+
 
 # Aufgabe 2: Slice und konkatiniere die folgende Liste so,
 #            dass sie sortiert ist und gebe sie aus.
@@ -60,8 +64,8 @@ for x in range(len(liste1)):
 print("\nAufgabe 3b\n")
 
 for x in range(len(liste1)):
-    if sum(liste1[0:x])>100:
-        print(liste1[0:x])
+    if sum(liste1[:x])>100:
+        print(liste1[:x])
         break
 
 # Aufgabe 3c: Slice die Liste1 in einem Loop durch Verschieben
