@@ -7,6 +7,7 @@ print(all([1,2,0,4,7,8,9])) # False, weil eine Null dabei ist (Nicht alle sind T
 print(any([1,2,0,4,7,8,9])) # True, weil mindestens eine Zahl nicht 0 ist
 
 # Map, Filter
+# Map
 def make_even(x):
     if x%2 != 0:
         return x + 1
@@ -16,6 +17,7 @@ def make_even(x):
 liste= list(map(make_even,[1,2,0,4,7,8,9]))
 print(liste)    # [2, 2, 0, 4, 8, 8, 10]
 
+# Filter
 def is_even(x):
     if x % 2 == 0:
         return x
@@ -77,7 +79,7 @@ print(listeD)   # [4, 8, 12, 16, 20]
 
 # Args und Kwargs
 
-def aFunction(var, *args, **kwargs):
+def aFunction(var,*args, **kwargs):
     '''
     Es muss nicht *args und **kwargs heißen, 
     wichtig sind die Sternchen.
@@ -95,5 +97,5 @@ def aFunction(var, *args, **kwargs):
     for value in kwargs.values():
         print(args[0]*value)
 
-aFunction("Var", 5,"m",3.14, kwargs1 = "Hallo", kwargs2 = "Welt")
+aFunction("Var",5,"m",3.14,kwargs1 = "Hallo",kwargs2 = "Welt")
 
