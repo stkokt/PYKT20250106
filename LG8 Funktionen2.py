@@ -40,6 +40,8 @@ print("\nAufgabe 1\n")
 #             print(f"Radius: {round(r, 2)}, Durchmesser: {round(d, 2)}, Flaeche: {round(a, 2)}")
 
 # Alternative 2
+# warum nicht einfach nur immer erst den Radius berechnen
+# und am Schluss alle anderen Werte:
 def kreis(val, mod="r"):
     from math import pi, sqrt
     r=0
@@ -58,11 +60,8 @@ def kreis(val, mod="r"):
     print(f"Radius: {round(r,2)}\nDurchmesser: {round(d,2)}\nUmfang: {round(u,2)}\nFläche: {round(a,2)}\n")
 
 kreis(5)
-print()
 kreis(5,"d")
-print()
 kreis(5,"a")
-print()
 kreis(5,"u")
 
 
@@ -71,16 +70,18 @@ kreis(5,"u")
 #            und eine Argumentenliste (*args) von Floats als Argumente übernimmt.
 #            In der Funktion sollen weitere Funktionen definiert sein, die je nach 
 #            Anforderung den Flächeninhalt eines Kreises, rechtwinkligen Dreiecks oder
-#            Rechtecks zurückgeben.
+#            Rechtecks zurückgeben. Als Werte bei der Dreicksberechnung sollen als Übergabe-
+#            parameter die Längen der Seiten angenommen werden, die den rechten Winkel
+#            einschließen.
 
 print("\nAufgabe 2\n")
 
 def flaeche(mod, *werte):
     from math import pi
     def circle_a():
-        return pi * werte[0]**2
+        return pi * werte[0]**2       # Kreisfläche
     def rect_a():
-        return werte[0]*werte[1]
+        return werte[0]*werte[1]      # Rechteckfläche
     match mod:
         case "c":
             print(f"Der Flächeninhalt des Kreises beträgt {round(circle_a(),2)}.\n")
@@ -88,7 +89,7 @@ def flaeche(mod, *werte):
             print(f"Der Flächeninhalt des Dreieckes beträgt {round(rect_a()/2,2)}.\n")
         case "r":
             print(f"Der Flächeninhalt des Rechteckes beträgt {round(rect_a(),2)}.\n")
-
+# Aufrufe
 flaeche("c",5)
 flaeche("t",5,2)
 flaeche("r",5,2)
@@ -115,11 +116,12 @@ print("\nAufgabe 3\n")
 
 def hallo(namedict:dict, *geschlecht, **anrede):
     for name, sex in namedict.items():
-        if sex == geschlecht[0]:
+        if sex == geschlecht[0]:  # Index 0 der Tupels geschlecht
             print(f"Hallo {list(anrede.values())[0]} {name.split()[-1]}!")
-        if sex == geschlecht[1]:
+        if sex == geschlecht[1]:  # Index 1 der Tupels geschlecht
             print(f"Hallo {list(anrede.values())[1]} {name.split()[-1]}!")
-
+    # die Values des Dictionarys am Index 1 gesplittet und davon das letzte Element
+# Aufruf:
 hallo(namen,'m','w',geschlecht1="Herr", geschlecht2="Frau")
 
 # Aufgabe 4: Schreibe zwei Passwortgeneratoren, die ein Passwort aus Groß- und
@@ -138,7 +140,7 @@ def pwgenSimple(pwLength:int)->str:
     """
     from string import hexdigits, punctuation
     from random import sample 
-    pwPool=hexdigits + punctuation
+    pwPool=hexdigits + punctuation  # Alle Zahlen und Buchstaben und die Sonderzeichen
     # print(pwPool)     # nur einkommentieren, um den Zeichenpool zu sehen
     return "".join(sample(pwPool, pwLength))    # Sampleliste wird in einen leeren String gejoint
 
