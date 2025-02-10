@@ -147,7 +147,7 @@ def pwgenSimple(pwLength:int)->str:
 print(pwgenSimple(20))
 
 def pwgenPro1(lows:int, caps:int, nums:int, specs:int=0)->str:  
-    # siehe ab Zeile 123, sinngemäß gleich, nur hier unter Verwendung des String- Moduls
+    # siehe ab Zeile 164, sinngemäß gleich, nur hier unter Verwendung des String- Moduls
     from random import sample, shuffle
     from string import ascii_lowercase, ascii_uppercase, digits, punctuation
     lowLetters=sample(ascii_lowercase, lows)
