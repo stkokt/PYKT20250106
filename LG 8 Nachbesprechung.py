@@ -80,6 +80,7 @@ liste = set(liste)
 print(liste)
 
 # Methode 2: Nutze die fromkeys- Methode des Datentypy Dicionary.
+#            Dadurch bleibt die Reihenfolge erhalten.
 
 liste2 = [1,2,4,3,6,1,5,2,2]
 liste2 = list(dict().fromkeys(liste2))
