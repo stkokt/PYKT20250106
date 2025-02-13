@@ -1,0 +1,80 @@
+<Schools>
+    <School name="School A">
+        <Class name="Class 1">
+            <Student name="Alexander" age="6" />
+            <Student name="Benjamin" age="8" />
+            <Student name="Charlotte" age="9" />
+            <Student name="Daniel" age="10" />
+            <Student name="Emma" age="11" />
+            <Student name="Felix" age="12" />
+            <Student name="Hannah" age="13" />
+            <Student name="Isabelle" age="14" />
+            <Student name="Jakob" age="15" />
+            <Student name="Katharina" age="16" />
+        </Class>
+        <Class name="Class 2">
+            <Student name="Leon" age="7" />
+            <Student name="Marie" age="8" />
+            <Student name="Maximilian" age="9" />
+            <Student name="Nora" age="10" />
+            <Student name="Oliver" age="11" />
+            <Student name="Paula" age="12" />
+            <Student name="Richard" age="13" />
+            <Student name="Sarah" age="14" />
+            <Student name="Thomas" age="15" />
+            <Student name="Victoria" age="17" />
+        </Class>
+    </School>
+    <School name="School B">
+        <Class name="Class 1">
+            <Student name="William" age="5" />
+            <Student name="Xenia" age="7" />
+            <Student name="Yannick" age="8" />
+            <Student name="Zoe" age="9" />
+            <Student name="Amelia" age="10" />
+            <Student name="Benedikt" age="11" />
+            <Student name="Clara" age="12" />
+            <Student name="David" age="13" />
+            <Student name="Elena" age="14" />
+            <Student name="Finn" age="18" />
+        </Class>
+        <Class name="Class 2">
+            <Student name="Gabriela" age="6" />
+            <Student name="Henry" age="7" />
+            <Student name="Isabella" age="8" />
+            <Student name="Johannes" age="9" />
+            <Student name="Karl" age="10" />
+            <Student name="Laura" age="11" />
+            <Student name="Matthias7" age="12" />
+            <Student name="Nina" age="13" />
+            <Student name="Oscar" age="14" />
+            <Student name="Paul" age="19" />
+        </Class>
+    </School>
+    <School name="School C">
+        <Class name="Class 1">
+            <Student name="Rebecca" age="6" />
+            <Student name="Samuel" age="7" />
+            <Student name="Theresa" age="8" />
+            <Student name="Uwe" age="9" />
+            <Student name="Valerie" age="10" />
+            <Student name="Walter" age="11" />
+            <Student name="Yara" age="12" />
+            <Student name="Zacharias" age="13" />
+            <Student name="Anna" age="14" />
+            <Student name="Boris" age="20" />
+        </Class>
+        <Class name="Class 2">
+            <Student name="Christina" age="7" />
+            <Student name="Dominik" age="8" />
+            <Student name="Eva" age="9" />
+            <Student name="Florian" age="10" />
+            <Student name="Greta" age="11" />
+            <Student name="Hugo" age="12" />
+            <Student name="Ingrid" age="13" />
+            <Student name="Jonas" age="14" />
+            <Student name="Klara" age="15" />
+            <Student name="Lukas" age="21" />
+        </Class>
+    </School>
+</Schools>
