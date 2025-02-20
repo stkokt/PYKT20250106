@@ -1,8 +1,9 @@
-from xml.etree import ElementTree as ET 
+import xml.etree.ElementTree as ET 
 
 tree = ET.parse('Fresstempel.xml')
 root = tree.getroot()
-print(root.findall('Restaurant'))
+#print(root)
+#print(root.findall('Restaurant'))
 
 # for restaurant in root.findall('Restaurant'):
 #     name = restaurant.get('name')
