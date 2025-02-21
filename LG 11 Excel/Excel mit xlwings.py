@@ -62,7 +62,7 @@ sheet = workbook.sheets.add(name='Neues Blatt')
 sheet.range('A1').value = 'Daten im neuen Blatt'
 
 # Speichere die Datei
-workbook.save('example.lsx')
+workbook.save('example.xlsx')
 
 # Schließe die Datei
 workbook.app.quit()
