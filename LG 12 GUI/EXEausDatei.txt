@@ -1,0 +1,11 @@
+Um eine Python Datei in eine ausführbare Datei umzuwandeln:
+
+Öffne ein Terminal/ eine Kommandozeile im Ordner, in dem die Datei liegt 
+und gebe ein:
+
+für MacOS oder Linux:
+    pyinstaller --onefile --windowed your_script.py
+
+für Windows:
+    pyinstaller --onefile --noconsole your_script.py
+
